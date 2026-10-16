@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1736900000000,
+    "ad": "Mantı",
+    "kategori": "yemek",
+    "kategoriDisplay": "Ana Yemek",
+    "hazirlamaSuresi": "1 saat 30 dakika",
+    "malzemeler": "- 500 g un\n- 2 yumurta\n- 1 su bardağı su\n- 1 çay kaşığı tuz\n- 250 g kıyma\n- 1 küçük soğan (rendelenmiş)\n- 2 su bardağı yoğurt\n- 2 diş sarımsak\n- 2 yemek kaşığı tereyağı\n- 1 yemek kaşığı pul biber",
+    "yapilisi": "Un, yumurta, tuz ve suyu yoğurup sert bir hamur elde edin. Üzerini örtüp 30 dakika dinlendirin.\nKıyma, rendelenmiş soğan, tuz ve karabiberi karıştırarak iç harcı hazırlayın.\nHamuru ince açıp küçük kareler kesin. Her karenin ortasına az miktarda harç koyup kenarlarını birleştirin.\nKaynayan tuzlu suda mantıları 10-12 dakika haşlayın.\nYoğurdu ezilmiş sarımsakla karıştırın. Tereyağında pul biberi kızdırın.\nMantıları servis tabağına alın, üzerine sarımsaklı yoğurdu ve biberli yağı gezdirin.",
+    "resim": "icons/mantı.jpg"
+  },
+  {
+    "id": 1736900000001,
+    "ad": "San Sebastian Cheesecake",
+    "kategori": "tatli",
+    "kategoriDisplay": "Tatlı",
+    "hazirlamaSuresi": "45 dakika + dinlendirme",
+    "malzemeler": "- 600 g krem peynir (oda sıcaklığında)\n- 200 g toz şeker\n- 4 yumurta\n- 300 ml sıvı krema\n- 1 yemek kaşığı mısır nişastası\n- 1 çay kaşığı vanilya\n- 1 tutam tuz",
+    "yapilisi": "Fırını 220 dereceye ısıtın. 20 cm'lik kalıbı yağlı kağıtla kaplayın; kağıt kenarlardan taşsın.\nKrem peyniri ve şekeri pürüzsüz olana kadar karıştırın.\nYumurtaları tek tek ekleyip her seferinde karıştırın.\nKrema, vanilya, tuz ve nişastayı ekleyip akışkan bir karışım elde edin.\nKarışımı kalıba dökün ve 40-45 dakika, üzeri koyu kahverengi olana kadar pişirin. Ortası hafif titrek kalmalı.\nOda sıcaklığında soğutun, ardından buzdolabında en az 4 saat dinlendirin.",
+    "resim": "icons/SanSebastianCheesecake.png"
+  },
+  {
+    "id": 1736900000002,
+    "ad": "Magnolia",
+    "kategori": "tatli",
+    "kategoriDisplay": "Tatlı",
+    "hazirlamaSuresi": "30 dakika + dinlendirme",
+    "malzemeler": "- 3 su bardağı süt\n- 1 su bardağı toz şeker\n- 3 yemek kaşığı un\n- 3 yemek kaşığı mısır nişastası\n- 2 yumurta sarısı\n- 1 paket vanilya\n- 200 ml soğuk krema\n- 1 paket petibör bisküvi\n- 2 muz\n- 10 adet çilek",
+    "yapilisi": "Süt, şeker, un, nişasta, yumurta sarıları ve vanilyayı bir tencerede çırpın.\nKarışımı sürekli karıştırarak koyulaşana kadar pişirin. Ocaktan alıp tamamen soğutun.\nSoğuk kremayı çırpıp soğuyan muhallebiye yavaşça karıştırın.\nBisküvileri ufalayın. Kaselerin tabanına bisküvi, ardından muhallebi koyun; dilimlenmiş muz ve çilekle katları tekrarlayın.\nÜzerini bisküvi ve çilekle süsleyin. Buzdolabında en az 3 saat dinlendirip servis edin.",
+    "resim": "icons/magnolia.png"
+  }
+]

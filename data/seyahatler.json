@@ -1,0 +1,48 @@
+[
+  {
+  "id": 1736900000005,
+  "ad": "Ankara Gezisi",
+  "kategori": "turkiye",
+  "kategoriDisplay": "Türkiye",
+  "tarih": "Ekim 2026",
+  "yer": "Ankara, Türkiye",
+  "slug": "ankara",
+  "haritaLink": "https://www.google.com/maps/search/?api=1&query=Ankara%2C%20Türkiye",
+  "aciklama": "Ankara gezime şehrin simgelerinden Anıtkabir'i ziyaret ederek başladım. Cumhuriyet tarihini yakından tanımak ve etkileyici mimarisini görmek için mutlaka vakit ayrılması gereken bir yer.\n\nArdından Ankara Kalesi'ne çıktım. Tarihi sokaklarda yürüyüş yapıp şehrin manzarasını seyrettim.\n\nSonraki durağım Anadolu Medeniyetleri Müzesi oldu. Anadolu'nun farklı dönemlerine ait eserleri görmek, şehrin tarihî zenginliğini keşfetmek açısından çok güzeldi.\n\nGünün devamında Hamamönü'nü gezdim. Restore edilmiş tarihî evleri, küçük kafeleri ve sokaklarıyla keyifli bir yürüyüş noktası.\n\nKüçük tavsiyeler:\n- Anıtkabir ziyaretiniz için yeterli zaman ayırın.\n- Ankara Kalesi çevresinde rahat yürüyüş ayakkabısı tercih edin.\n- Hamamönü'nde mola verip geleneksel lezzetleri deneyebilirsiniz.",
+  "resim": "icons/ankara.jpg"
+},
+  {
+    "id": 1736900000001,
+    "ad": "İstanbul Gezisi",
+    "kategori": "turkiye",
+    "kategoriDisplay": "Türkiye",
+    "tarih": "Haziran 2025",
+    "yer": "İstanbul, Türkiye",
+    "slug": "istanbul",
+    "aciklama": "İstanbul'a geldiğim sabah güne enerjik başladım. İlk durağım Pierre Loti Tepesi oldu. Tepeden Haliç manzarasını seyrederken kendime bir kahve aldım. Sabah saatlerini tercih edin; kalabalık az oluyor ve ışık manzarayı güzelleştiriyor.\n\nArdından Haliç Köprüsü üzerinden yürüyerek şehrin farklı bir köşesine geçtim ve Bozdoğan Su Kemeri'ni gördüm. Fotoğraf çekmek için harika bir nokta.\n\nSüleymaniye Camii, Mimar Sinan'ın ustalığını gözler önüne seren, hem mimari hem de huzur açısından mutlaka ziyaret edilmesi gereken bir yer.\n\nÖğle saatlerinde Eminönü'nde meşhur ekmek arası balık yedim, ardından tekneyle Boğaz turuna çıktım. Dolmabahçe Sarayı, Rumeli Hisarı ve Kız Kulesi gibi ikonik yapıları denizden görmek ayrı bir deneyim.\n\nTurumu Taksim Meydanı ve İstiklal Caddesi'nde yürüyüş yaparak bitirdim.\n\nKüçük tavsiyeler:\n- Sabah erken saatlerde kalabalık yerlere gitmek fotoğraf ve manzara için çok ideal.\n- Tekne turu için öğleden sonra saatlerini tercih edin.\n- Rahat yürüyüş ayakkabısı giyin; şehirde yürüyerek keşfedilecek çok yer var.",
+    "resim": "icons/istanbul.jpg"
+  },
+  {
+    "id": 1736900000002,
+    "ad": "Kapadokya Gezisi",
+    "kategori": "turkiye",
+    "kategoriDisplay": "Türkiye",
+    "tarih": "Belirtilmemiş",
+    "yer": "Nevşehir, Türkiye",
+    "slug": "kapadokya",
+    "aciklama": "Gezime Peri Bacaları ile başladım. Doğanın milyonlarca yıl süren çalışmasının eseri olan bu benzersiz oluşumlar, Kapadokya'nın simgesi haline gelmiş durumda.\n\nSabahın erken saatlerinde sıcak hava balon turuna katıldım. Gün doğumunda gökyüzünde süzülen yüzlerce balon eşsiz bir manzara oluşturuyordu.\n\nBir sonraki durağım Göreme Açık Hava Müzesi oldu. Kaya içine oyulmuş kiliseler ve freskler, bölgenin tarihi ve kültürel zenginliğini gözler önüne seriyor.\n\nSon olarak Derinkuyu Yeraltı Şehri'ni ziyaret ettim. Binlerce kişinin barınabileceği bu yapılar, Kapadokya'nın gizemli yönünü keşfetmemi sağladı.\n\nKüçük tavsiyeler:\n- Balon turu için rezervasyonunuzu birkaç gün önceden yaptırın; özellikle yaz aylarında çok yoğun oluyor.\n- Rahat bir yürüyüş ayakkabısı alın, yürüyüş parkurları çok fazla.\n- Gün batımı manzarası için Uçhisar Kalesi en ideal noktalardan biridir.",
+    "resim": "icons/kapadokyajpg.jpg"
+  },
+  
+  {
+    "id": 1736900000004,
+    "ad": "Gize Gezisi",
+    "kategori": "yurtdisi",
+    "kategoriDisplay": "Yurtdışı",
+    "tarih": "Belirtilmemiş",
+    "yer": "Gize, Mısır",
+    "slug": "gize",
+    "aciklama": "Kahire'nin hemen yanındaki Gize Platosu, antik dünyanın görkemini bugün bile hissettiren bir yer.\n\nGüne Keops Piramidi ile başladım. Sabah erken saatlerde hem sıcak daha yumuşak hem de kalabalık az oluyor. İçine girmek isterseniz ayrıca bilet almanız gerekiyor; dar tüneller ve dik rampalara hazırlıklı olun.\n\nÖğleye doğru Büyük Sfenks'e geçtim ve kısa bir deve turu yaptım. Pazarlık yapmayı unutmayın!\n\nVadi Tapınağı ve Güneş Tekneleri Müzesi sonraki durağım oldu. Günü Sound & Light Show ile kapattım; gün batımından sonra piramitlerin ışıklarla canlanması gerçekten büyüleyici.\n\nKüçük tavsiyeler:\n- Erken gidin; hem serin hem sakin.\n- Bol su, şapka ve güneş kremi alın.\n- Ulaşım için güvenilir taksi veya şoförlü araç tercih edin.",
+    "resim": "icons/egypt.jpg"
+  }
+]

@@ -1,0 +1,16 @@
+# Yönetim paneli (şifre dosyanın içinde açık yazıyor)
+admin/
+
+# Gizli dosyalar
+.env
+.env.*
+
+# Sistem ve editör dosyaları
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Log ve geçici dosyalar
+*.log
+*.tmp

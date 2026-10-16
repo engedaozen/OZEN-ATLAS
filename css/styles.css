@@ -1,0 +1,881 @@
+/* Custom CSS for ÖZEN ATLAS Website */
+
+:root {
+  --primary-color: #e74c3c;
+  --secondary-color: #f39c12;
+  --accent-color: #3498db;
+  --dark-color: #2c3e50;
+  --light-color: #ecf0f1;
+  --white: #ffffff;
+  --gradient-primary: linear-gradient(135deg, #e74c3c 0%, #f39c12 100%);
+  --gradient-secondary: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Bootstrap zaten box-sizing ve margin/padding sıfırlamasını yapıyor */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Sabit navbar'ın altında kalmasın (menüden #anchor'a gidince) */
+[id] {
+  scroll-margin-top: 90px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: var(--dark-color);
+  overflow-x: hidden;
+  padding-top: 70px; /* navbar yüksekliği kadar boşluk */
+}
+
+/* Arabic Language Support */
+html[dir="rtl"] {
+  font-family: "Amiri", "Poppins", sans-serif;
+  text-align: right;
+}
+
+html[dir="rtl"] .navbar-nav {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .hero-buttons .btn {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* JS ile eklenen çok satırlı içerik (malzemeler, yapılışı, açıklama):
+   satır sonları korunsun */
+.dyn-block {
+  white-space: pre-line;
+}
+
+/* Navigation */
+.custom-navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030; /* Bootstrap standardı */
+}
+
+.navbar-brand {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color) !important;
+  text-decoration: none;
+  white-space: nowrap; /* alt satıra kaymasını engelle */
+}
+
+.brand-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: var(--dark-color) !important;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* çizgiyi yazının altına yerleştir */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link.active::before {
+  width: 100%; /* hover veya aktif sayfada aç */
+}
+
+.navbar-nav .dropdown-toggle::after {
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-left: 0.3em solid transparent;
+  border-bottom: 0;
+  margin-inline-start: 0.3em;
+  vertical-align: middle;
+  position: static;
+}
+
+/* Language dropdown */
+#languageDropdown {
+  background: var(--gradient-primary);
+  color: white !important;
+  border-radius: 25px;
+  padding: 8px 15px !important;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 2px 10px rgba(231, 76, 60, 0.2);
+}
+
+#languageDropdown:hover {
+  background: var(--gradient-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+#languageDropdown::before {
+  display: none !important;
+}
+
+.language-option {
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  margin: 2px 0;
+}
+
+.language-option:hover {
+  background: var(--gradient-primary);
+  color: white !important;
+  transform: translateX(5px);
+}
+
+.language-option.active {
+  background: rgba(231, 76, 60, 0.1);
+  color: var(--primary-color) !important;
+  font-weight: 600;
+}
+
+.language-option i {
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.language-option:hover i {
+  color: white;
+}
+
+#currentLanguage {
+  font-weight: 700;
+  margin-inline-start: 5px;
+}
+
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../icons/istanbul.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(231, 76, 60, 0.3) 0%, rgba(52, 152, 219, 0.3) 100%);
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 1s ease;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease 0.2s both;
+}
+
+.hero-buttons {
+  animation: fadeInUp 1s ease 0.4s both;
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  border: none;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  background: var(--gradient-primary);
+}
+
+/* Features Section */
+.features-section {
+  padding-top: 120px;
+}
+
+.feature-card {
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.feature-icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.feature-icon i {
+  font-size: 2rem;
+  color: white;
+}
+
+.feature-card:hover .feature-icon {
+  background: var(--gradient-secondary);
+  transform: scale(1.1);
+}
+
+.feature-card h4 {
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+/* Destinations / Turkey Section */
+.destinations-section,
+.turkey-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.destination-card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  height: 300px;
+}
+
+.destination-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.destination-image {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* index'teki kartlarda resim + overlay bir <a> içinde */
+.destination-image > a {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.destination-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.destination-card:hover .destination-image img {
+  transform: scale(1.1);
+}
+
+.destination-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  color: white;
+}
+
+.destination-info h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.destination-info p {
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+/* Kartların scroll ile belirme animasyonu (script.js .reveal / .visible ekler) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Contact Section */
+.contact-info-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  height: 100%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+.contact-item i {
+  color: var(--primary-color);
+  width: 40px;
+  height: 40px;
+  background: rgba(231, 76, 60, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-end: 1rem;
+  flex-shrink: 0;
+}
+
+.contact-item div h5 {
+  color: var(--dark-color);
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contact-item div span {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+.contact-form .form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(231, 76, 60, 0.25);
+}
+
+/* Footer */
+.footer-section {
+  background: var(--dark-color);
+  color: white;
+}
+
+.footer-brand h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.footer-brand p {
+  color: #bdc3c7;
+  margin-bottom: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  width: 40px;
+  height: 40px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+  background: var(--gradient-secondary);
+}
+
+.footer-section h5 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
+}
+
+.contact-info p {
+  color: #bdc3c7;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info i {
+  color: var(--primary-color);
+  width: 20px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gradient-secondary);
+}
+
+/* Page Header Styles */
+.page-header {
+  background: var(--gradient-primary);
+  padding: 120px 0 80px;
+  color: white;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Filter Section */
+.filter-section {
+  border-bottom: 1px solid #e9ecef;
+}
+
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filter-btn {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  text-decoration: none; /* <a class="filter-btn"> altı çizili görünmesin */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* FAQ Section */
+.accordion-item {
+  border: none;
+  margin-bottom: 1rem;
+  border-radius: 10px !important;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-button {
+  background: white;
+  border: none;
+  font-weight: 600;
+  color: var(--dark-color);
+  padding: 1.5rem;
+}
+
+.accordion-button:not(.collapsed) {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border: none;
+}
+
+.accordion-body {
+  padding: 1.5rem;
+  background: #f8f9fa;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+  background: var(--gradient-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Form Improvements */
+.form-label {
+  font-weight: 500;
+  color: var(--dark-color);
+  margin-bottom: 0.5rem;
+}
+
+.form-check-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Hareket azaltma tercihi olan kullanıcılar için animasyonları kapat */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero-title,
+  .hero-subtitle,
+  .hero-buttons {
+    animation: none;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .contact-form,
+  .contact-info-card {
+    padding: 1.5rem;
+  }
+
+  .hero-buttons .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .filter-tabs {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+
+  .filter-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-item i {
+    margin: 0 auto 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .page-header {
+    padding: 100px 0 60px;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 442px) {
+  .navbar-brand {
+    font-size: 1rem;
+    max-width: 60%; /* hamburger için yer aç */
+    overflow: hidden;
+    text-overflow: ellipsis; /* sığmazsa üç nokta koyar */
+  }
+}
+/* Gezi kartlarındaki Haritada Gör bağlantısı */
+.destination-info .map-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 25px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.destination-info .map-link:hover {
+  color: #fff;
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.destination-info .map-link i {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 576px) {
+  .destination-info .map-link {
+    padding: 7px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Detayları Gör butonu */
+.destination-info .details-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 8px 14px;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  color: #fff;
+  background: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.destination-info .details-link {
+  color: var(--primary-color);
+}
+
+.destination-info .details-link:hover {
+  color: #fff;
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.destination-info .details-link i {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 576px) {
+  .destination-info .details-link {
+    padding: 7px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+
+/* İletişim bölümündeki gömülü Ankara haritası */
+.contact-map {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+.contact-map iframe {
+    display: block;
+    width: 100%;
+    height: 280px;
+    border: 0;
+    border-radius: 12px;
+}
+
+@media (max-width: 576px) {
+    .contact-map iframe {
+        height: 230px;
+    }
+}
