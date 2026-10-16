@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harita | ÖZEN ATLAS</title>
+    <meta name="description" content="ÖZEN ATLAS ile gezdiğimiz yerleri harita üzerinde keşfedin.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E✈️%3C/text%3E%3C/svg%3E">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-plane me-2"></i>
+                <span class="brand-text">ÖZEN ATLAS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü aç/kapat">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" data-translate="nav.home">ANASAYFA</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="seyahatlerDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-translate="nav.travels">SEYAHATLER</a>
+                        <ul class="dropdown-menu" aria-labelledby="seyahatlerDropdown">
+                            <li><a class="dropdown-item" href="destination.html#turkiye" data-translate="nav.turkey">Türkiye</a></li>
+                            <li><a class="dropdown-item" href="destination.html#yurtdisi" data-translate="nav.abroad">Yurtdışı</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="tariflerDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-translate="nav.recipes">TARİFLER</a>
+                        <ul class="dropdown-menu" aria-labelledby="tariflerDropdown">
+                            <li><a class="dropdown-item" href="tarif.html#tatli" data-translate="nav.desserts">Tatlılar</a></li>
+                            <li><a class="dropdown-item" href="tarif.html#yemek" data-translate="nav.meals">Yemekler</a></li>
+                            <li><a class="dropdown-item" href="tarif.html#corba" data-translate="filter.soup">Çorbalar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="harita.html" data-translate="nav.map">HARİTA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" data-translate="nav.contact">İLETİŞİM / ABONE OL</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Dil seçimi">
+                            <i class="fas fa-globe me-1"></i>
+                            <span id="currentLanguage">TR</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item language-option" href="#" onclick="changeLanguage('tr')" data-lang="tr"><i class="fas fa-flag me-2"></i>Türkçe</a></li>
+                            <li><a class="dropdown-item language-option" href="#" onclick="changeLanguage('en')" data-lang="en"><i class="fas fa-flag me-2"></i>English</a></li>
+                            <li><a class="dropdown-item language-option" href="#" onclick="changeLanguage('ar')" data-lang="ar"><i class="fas fa-flag me-2"></i>العربية</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Gezdiğimiz Yerler</h1>
+                <p class="page-subtitle">Seyahatlerimizi harita üzerinde keşfedin</p>
+            </div>
+        </section>
+
+        <!-- Filtre -->
+        <section class="filter-section py-4 bg-light">
+            <div class="container">
+                <div class="filter-tabs text-center">
+                    <button class="filter-btn active" data-filter="all">Tümü</button>
+                    <button class="filter-btn" data-filter="turkiye">Türkiye</button>
+                    <button class="filter-btn" data-filter="yurtdisi">Yurtdışı</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Harita -->
+        <section class="map-section">
+            <div class="container">
+                <p class="map-count" id="mapCount"></p>
+                <div id="map"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand">
+                        <h4><i class="fas fa-plane me-2"></i>ÖZEN ATLAS</h4>
+                        <p data-translate="footer.description">2025'ten beri unutulmaz seyahat deneyimleri yaratıyoruz. Hayalinizdeki destinasyonlara yolculuk burada başlıyor.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 data-translate="footer.quick.title">Hızlı Linkler</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home" data-translate="nav.home">ANASAYFA</a></li>
+                        <li><a href="destination.html#yurtdisi" data-translate="nav.abroad">Yurtdışı</a></li>
+                        <li><a href="destination.html#turkiye" data-translate="nav.turkey">Türkiye</a></li>
+                        <li><a href="harita.html" data-translate="nav.map">HARİTA</a></li>
+                        <li><a href="contact.html" data-translate="nav.contact">İLETİŞİM / ABONE OL</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="mb-0" data-translate="footer.copyright">© 2025 ÖZEN ATLAS. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="translation-system.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+      const map = L.map("map").setView([39, 35], 4);
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "&copy; OpenStreetMap"
+      }).addTo(map);
+
+      const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
+        ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+      const layer = L.layerGroup().addTo(map);
+      const countEl = document.getElementById("mapCount");
+      let trips = [];
+
+      function draw(filter) {
+        layer.clearLayers();
+        const shown = trips.filter((t) =>
+          t.lat != null && t.lng != null && (filter === "all" || t.kategori === filter));
+
+        shown.forEach((t) => {
+          L.marker([t.lat, t.lng]).addTo(layer).bindPopup(`
+            <div class="map-popup">
+              <img src="${esc(t.resim)}" alt="${esc(t.ad)}"
+                   onerror="this.onerror=null;this.src='icons/placeholder.jpg'">
+              <div class="map-popup-body">
+                <h6>${esc(t.ad)}</h6>
+                <p><i class="fas fa-map-marker-alt me-1"></i>${esc(t.yer)}</p>
+                <p><i class="fas fa-calendar me-1"></i>${esc(t.tarih)}</p>
+                <a class="map-popup-link" href="destination.html#${esc(t.slug)}">Detaylar</a>
+              </div>
+            </div>`);
+        });
+
+        countEl.textContent = shown.length + " yer gösteriliyor";
+        if (shown.length) {
+          map.fitBounds(shown.map((t) => [t.lat, t.lng]), { padding: [50, 50], maxZoom: 6 });
+        }
+      }
+
+      fetch("data/seyahatler.json")
+        .then((r) => r.json())
+        .then((data) => { trips = data; draw("all"); })
+        .catch(() => { countEl.textContent = "Konum verisi yüklenemedi."; });
+
+      document.querySelectorAll(".filter-btn").forEach((btn) =>
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".filter-btn").forEach((b) =>
+            b.classList.toggle("active", b === btn));
+          draw(btn.dataset.filter);
+        }));
+    </script>
+</body>
+</html>
