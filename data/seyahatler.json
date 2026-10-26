@@ -41,16 +41,44 @@
   },
   
   {
-    "id": 1736900000004,
-    "ad": "Gize Gezisi",
-    "kategori": "yurtdisi",
-    "kategoriDisplay": "Yurtdışı",
-    "tarih": "Belirtilmemiş",
-    "yer": "Gize, Mısır",
-    "slug": "gize",
-        "lat": 29.9792,
-    "lng": 31.1342,
-    "aciklama": "Kahire'nin hemen yanındaki Gize Platosu, antik dünyanın görkemini bugün bile hissettiren bir yer.\n\nGüne Keops Piramidi ile başladım. Sabah erken saatlerde hem sıcak daha yumuşak hem de kalabalık az oluyor. İçine girmek isterseniz ayrıca bilet almanız gerekiyor; dar tüneller ve dik rampalara hazırlıklı olun.\n\nÖğleye doğru Büyük Sfenks'e geçtim ve kısa bir deve turu yaptım. Pazarlık yapmayı unutmayın!\n\nVadi Tapınağı ve Güneş Tekneleri Müzesi sonraki durağım oldu. Günü Sound & Light Show ile kapattım; gün batımından sonra piramitlerin ışıklarla canlanması gerçekten büyüleyici.\n\nKüçük tavsiyeler:\n- Erken gidin; hem serin hem sakin.\n- Bol su, şapka ve güneş kremi alın.\n- Ulaşım için güvenilir taksi veya şoförlü araç tercih edin.",
-    "resim": "icons/egypt.jpg"
-  }
+    
+  "id": 1736900000003,
+  "ad": "Kyoto Gezisi",
+  "kategori": "yurtdisi",
+  "kategoriDisplay": "Yurtdışı",
+  "tarih": "Belirtilmemiş",
+  "yer": "Kyoto, Japonya",
+  "slug": "kyoto",
+  "lat": 35.0116,
+  "lng": 135.7681,
+  "aciklama": "Japonya'nın eski başkentlerinden Kyoto, geleneksel tapınakları, bambu ormanları ve tarihi sokaklarıyla ülkenin kültürel zenginliğini yansıtır.\n\nGezinize binlerce kırmızı kapısıyla ünlü Fushimi Inari Taisha Tapınağı'ndan başlayabilirsiniz. Dağın yamaçlarına doğru uzanan yürüyüş yolu, fotoğraf çekmek ve doğayla iç içe vakit geçirmek için etkileyici bir duraktır.\n\nDaha sonra altın rengi dış cephesiyle dikkat çeken Kinkaku-ji Tapınağı'nı ziyaret edebilir, Arashiyama Bambu Ormanı'nda yürüyüş yapabilirsiniz. Gion bölgesindeki geleneksel ahşap evler ve sokaklar da Kyoto'nun tarihini yakından tanımak için güzel bir seçenektir.\n\nKüçük tavsiyeler:\n- Tapınakları rahatça gezebilmek için erken saatlerde yola çıkın.\n- Toplu taşıma kullanarak şehir içinde kolayca ulaşım sağlayabilirsiniz.\n- Tapınak ve kutsal alanlarda ziyaret kurallarına dikkat edin.",
+  "resim": "icons/kyoto.jpeg"
+  },
+
+  {
+  "id": 1736900000004,
+  "ad": "Roma Gezisi",
+  "kategori": "yurtdisi",
+  "kategoriDisplay": "Yurtdışı",
+  "tarih": "Belirtilmemiş",
+  "yer": "Roma, İtalya",
+  "slug": "roma",
+  "lat": 41.9028,
+  "lng": 12.4964,
+  "aciklama": "İtalya'nın başkenti Roma, tarihi yapıları, meydanları ve kendine özgü sokaklarıyla keşfedilmeye değer bir şehir.\n\nGezinize antik Roma'nın en önemli yapılarından Kolezyum ile başlayabilirsiniz. Ardından Roma Forumu'nu ziyaret ederek şehrin antik dönemine ait kalıntıları keşfedebilirsiniz.\n\nŞehir merkezine doğru ilerlediğinizde ünlü Trevi Çeşmesi ve İspanyol Merdivenleri sizi karşılar. Dar sokaklardaki kafelerde mola verip İtalyan mutfağının lezzetlerini deneyebilirsiniz.\n\nKüçük tavsiyeler:\n- Kolezyum için biletinizi önceden alın.\n- Tarihi bölgeleri rahat ayakkabılarla gezin.\n- Şehrin önemli noktalarını yürüyerek keşfetmek için zaman ayırın.",
+  "resim": "icons/rome.jpeg"
+},
+{
+  "id": 1736900000009,
+  "ad": "İsviçre Gezisi",
+  "kategori": "yurtdisi",
+  "kategoriDisplay": "Yurtdışı",
+  "tarih": "Belirtilmemiş",
+  "yer": "Lauterbrunnen, İsviçre",
+  "slug": "isvicre",
+  "lat": 46.5935,
+  "lng": 7.9091,
+  "aciklama": "İsviçre'nin büyüleyici doğasını keşfetmek için Lauterbrunnen, yemyeşil vadisi, yüksek kayalıkları ve etkileyici şelaleleriyle harika bir başlangıç noktasıdır.\n\nGezinize, vadinin simgelerinden biri olan Staubbach Şelalesi'ni görerek başlayabilirsiniz. Yüksek kayalardan aşağı dökülen suyun oluşturduğu manzara, fotoğraf çekmek için oldukça etkileyicidir.\n\nArdından Lauterbrunnen'in çevresindeki yürüyüş yollarını keşfedebilir ve geleneksel İsviçre köylerinin sakin atmosferinin tadını çıkarabilirsiniz. Zamanınız varsa tren veya teleferikle Wengen ya da Mürren gibi dağ köylerine geçerek Alplerin panoramik manzaralarını görebilirsiniz.\n\nKüçük tavsiyeler:\n- Dağlık bölgelerde hava hızla değişebileceği için yanınıza katmanlı kıyafetler alın.\n- Yürüyüş için rahat ve kaymaz ayakkabılar tercih edin.\n- Teleferik ve tren saatlerini önceden kontrol edin.\n- Şelaleler ve dağ manzaraları için hava durumuna uygun bir gün seçin.",
+  "resim": "icons/isvicre.jpg"
+}
 ]

@@ -226,7 +226,7 @@ h6 {
 /* Hero Section */
 .hero-section {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../icons/istanbul.jpg") center / cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../icons/arkaplan.png") center / cover no-repeat;
   display: flex;
   align-items: center;
   position: relative;

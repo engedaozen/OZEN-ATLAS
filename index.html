@@ -70,7 +70,9 @@
                             <li><a class="dropdown-item" href="tarif.html#corba" data-translate="filter.soup">Çorbalar</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="harita.html">HARİTA</a></li>
+                    <li class="nav-item">
+    <a class="nav-link" href="harita.html" data-translate="nav.map">HARİTA</a>
+</li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html" data-translate="nav.contact">İLETİŞİM / ABONE OL</a>
                     </li>
@@ -83,6 +85,7 @@
                             <li><a class="dropdown-item language-option" href="#" onclick="changeLanguage('tr')" data-lang="tr"><i class="fas fa-flag me-2"></i>Türkçe</a></li>
                             <li><a class="dropdown-item language-option" href="#" onclick="changeLanguage('en')" data-lang="en"><i class="fas fa-flag me-2"></i>English</a></li>
                             <li><a class="dropdown-item language-option" href="#" onclick="changeLanguage('ar')" data-lang="ar"><i class="fas fa-flag me-2"></i>العربية</a></li>
+                            <li><a class="dropdown-item language-option" href="#" onclick="changeLanguage('ru')" data-lang="ru"><i class="fas fa-flag me-2"></i>Русский</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -142,78 +145,155 @@
             </div>
         </section>
 
-        <!-- Yurtdışı -->
-        <section id="yurtdisi" class="destinations-section py-5">
-            <div class="container">
-                <div class="row mb-5">
-                    <div class="col-lg-8 mx-auto text-center">
-                        <h2 class="section-title" data-translate="destinations.international.title">Yurtdışı Destinasyonları</h2>
-                        <p class="section-subtitle" data-translate="destinations.international.subtitle">Dünyanın en güzel ve heyecan verici yerlerini keşfedin</p>
-                    </div>
-                </div>
-                
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="destination-card">
-                            <div class="destination-image">
-                                <a href="destination.html#gize">
-                                    <img src="icons/egypt.jpg" alt="Gize" class="img-fluid" loading="lazy">
-                                    <div class="destination-overlay">
-                                        <div class="destination-info">
-                                            <h4 data-translate="destinations.giza">Gize</h4>
-                                            <p><i class="fas fa-map-marker-alt me-2"></i><span data-translate="destinations.egypt">Mısır</span></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- React: Tarif ve Seyahat Önerileri -->
+<section id="oneriler" class="py-5 bg-light">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-lg-8 mx-auto text-center">
+               
+<h2 class="section-title" data-translate="suggestions.title">
+    Sana Özel Öneriler
+</h2>
+<p class="section-subtitle" data-translate="suggestions.subtitle">
+    Bugün ne pişireceğini veya nereye gideceğini birlikte keşfedelim.
+</p>
 
-        <!-- Türkiye -->
-        <section id="turkiye" class="turkey-section py-5 bg-light">
-            <div class="container">
-                <div class="row mb-5">
-                    <div class="col-lg-8 mx-auto text-center">
-                        <h2 class="section-title" data-translate="destinations.turkey.title">Türkiye Destinasyonları</h2>
-                        <p class="section-subtitle" data-translate="destinations.turkey.subtitle">Ülkemizin eşsiz güzelliklerini keşfedin</p>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="destination-card">
-                            <div class="destination-image">
-                                <a href="destination.html#kapadokya">
-                                    <img src="icons/kapadokyajpg.jpg" alt="Kapadokya" class="img-fluid" loading="lazy">
-                                    <div class="destination-overlay">
-                                        <div class="destination-info">
-                                            <h4 data-translate="destinations.cappadocia">Kapadokya</h4>
-                                            <p><i class="fas fa-map-marker-alt me-2"></i><span data-translate="destinations.nevsehir">Nevşehir</span></p>
-                                        </div>
-                                    </div>
-                                </a>
+            </div>
+        </div>
+
+        <!-- React uygulaması buraya yerleşecek -->
+        <div id="react-root"></div>
+    </div>
+</section>
+
+       <!-- Yurtdışı -->
+<section id="yurtdisi" class="destinations-section py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-title" data-translate="destinations.international.title">Yurtdışı Destinasyonları</h2>
+                <p class="section-subtitle" data-translate="destinations.international.subtitle">Dünyanın en güzel ve heyecan verici yerlerini keşfedin</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Kyoto Kartı -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <a href="destination.html#kyoto">
+                            <img src="icons/kyoto.jpeg" alt="Kyoto" class="img-fluid" loading="lazy">
+                            <div class="destination-overlay">
+                                <div class="destination-info">
+                                    <h4 data-translate="destinations.kyoto">Kyoto</h4>
+                                    <p><i class="fas fa-map-marker-alt me-2"></i><span data-translate="destinations.japan">Japonya</span></p>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="destination-card">
-                            <div class="destination-image">
-                                <a href="destination.html#istanbul">
-                                    <img src="icons/istanbul.jpg" alt="İstanbul" class="img-fluid" loading="lazy">
-                                    <div class="destination-overlay">
-                                        <div class="destination-info">
-                                            <h4 data-translate="destinations.istanbul">İstanbul</h4>
-                                            <p><i class="fas fa-map-marker-alt me-2"></i><span data-translate="destinations.turkey">Türkiye</span></p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <!-- Roma Kartı -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <a href="destination.html#roma">
+                            <img src="icons/rome.jpeg" alt="Roma" class="img-fluid" loading="lazy">
+                            <div class="destination-overlay">
+                                <div class="destination-info">
+                                    <h4 data-translate="destinations.rome">Roma</h4>
+                                    <p><i class="fas fa-map-marker-alt me-2"></i><span data-translate="destinations.italy">İtalya</span></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- İsviçre Kartı -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <a href="destination.html#isvicre">
+                            <img src="icons/isvicre.jpg" alt="İsviçre" class="img-fluid" loading="lazy">
+                            <div class="destination-overlay">
+                                <div class="destination-info">
+                                    <h4 data-translate="destinations.switzerland">Lauterbrunnen</h4>
+                                    <p><i class="fas fa-map-marker-alt me-2"></i><span data-translate="destinations.switzerland_country">İsviçre</span></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+       <!-- Türkiye -->
+<section id="turkiye" class="turkey-section py-5 bg-light">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-title" data-translate="destinations.turkey.title">Türkiye Destinasyonları</h2>
+                <p class="section-subtitle" data-translate="destinations.turkey.subtitle">Ülkemizin eşsiz güzelliklerini keşfedin</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!-- Ankara Kartı (Yeni Eklendi) -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <a href="destination.html#ankara">
+                            <img src="icons/ankara.jpg" alt="Ankara" class="img-fluid" loading="lazy">
+                            <div class="destination-overlay">
+                                <div class="destination-info">
+                                    <h4 data-translate="destinations.ankara">Ankara</h4>
+                                    <p><i class="fas fa-map-marker-alt me-2"></i><span data-translate="destinations.turkey">Türkiye</span></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- İstanbul Kartı -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <a href="destination.html#istanbul">
+                            <img src="icons/istanbul.jpg" alt="İstanbul" class="img-fluid" loading="lazy">
+                            <div class="destination-overlay">
+                                <div class="destination-info">
+                                    <h4 data-translate="destinations.istanbul">İstanbul</h4>
+                                    <p><i class="fas fa-map-marker-alt me-2"></i><span data-translate="destinations.turkey">Türkiye</span></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kapadokya Kartı -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <a href="destination.html#kapadokya">
+                            <img src="icons/kapadokyajpg.jpg" alt="Kapadokya" class="img-fluid" loading="lazy">
+                            <div class="destination-overlay">
+                                <div class="destination-info">
+                                    <h4 data-translate="destinations.cappadocia">Kapadokya</h4>
+                                    <p><i class="fas fa-map-marker-alt me-2"></i><span data-translate="destinations.nevsehir">Nevşehir</span></p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- İletişim -->
         <section id="iletisim" class="contact-section py-5 bg-light">
@@ -313,7 +393,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="footer-brand">
                         <h4><i class="fas fa-plane me-2"></i>ÖZEN ATLAS</h4>
-                        <p data-translate="footer.description">2025'ten beri unutulmaz seyahat deneyimleri yaratıyoruz. Hayalinizdeki destinasyonlara yolculuk burada başlıyor.</p>
+                        <p data-translate="footer.description">2026'dan beri unutulmaz seyahat deneyimleri yaratıyoruz. Hayalinizdeki destinasyonlara yolculuk burada başlıyor.</p>
                         <div class="social-links">
                             <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                             <a href="#" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
@@ -350,15 +430,16 @@
             <hr class="my-4">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p class="mb-0" data-translate="footer.copyright">© 2025 ÖZEN ATLAS. Tüm hakları saklıdır.</p>
+                    <p class="mb-0" data-translate="footer.copyright">© 2026 ÖZEN ATLAS. Tüm hakları saklıdır.</p>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js" defer></script>
-    <script src="translation-system.js" defer></script>
-    <script src="script.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js" defer></script>
+<script src="translation-system.js" defer></script>
+<script src="script.js" defer></script>
+<script type="module" src="react-widget.js"></script>
 </body>
 </html>

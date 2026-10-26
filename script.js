@@ -307,23 +307,36 @@ travelCards(list) {
       <div class="dyn dyn-block">${esc(x.aciklama)}</div>`);
   }
 
+
   // ---------- ORTAK ----------
   openModal(id, title, bodyHTML) {
     document.getElementById(id)?.remove();
+
     document.body.insertAdjacentHTML("beforeend", `
       <div class="modal fade" id="${id}" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable"><div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title dyn">${esc(title)}</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title dyn">${esc(title)}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">${bodyHTML}</div>
           </div>
-          <div class="modal-body">${bodyHTML}</div>
-        </div></div>
-      </div>`);
+        </div>
+      </div>
+    `);
+
     const el = document.getElementById(id);
+
+    // Yeni eklenen modalın içeriklerini seçili dile çevir
+    if (window.translationSystem) {
+      window.translationSystem.translatePage(el);
+    }
+
     el.addEventListener("hidden.bs.modal", () => el.remove());
     window.bootstrap.Modal.getOrCreateInstance(el).show();
   }
+
 
   initCardClicks() {
     document.addEventListener("click", (e) => {

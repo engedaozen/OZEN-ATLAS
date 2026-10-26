@@ -5,7 +5,7 @@
 const CACHE_KEY = "translationCache";
 const CACHE_LIMIT = 1500;      // önbellekte tutulacak en fazla çeviri sayısı
 const REQUEST_TIMEOUT = 8000;  // ms, takılan istekleri iptal et
-const SUPPORTED_LANGS = ["tr", "en", "ar"];
+const SUPPORTED_LANGS = ["tr", "en", "ar", "ru"];
 
 class TranslationSystem {
   constructor() {
@@ -29,7 +29,7 @@ class TranslationSystem {
   loadTranslations() {
     return {
       tr: {
-        "nav.home": "ANASAYFA", "nav.travels": "SEYAHATLER", "nav.recipes": "TARİFLER",
+        "nav.home": "ANASAYFA", "nav.travels": "SEYAHATLER", "nav.recipes": "TARİFLER","nav.map": "HARİTA",
         "nav.contact": "İLETİŞİM / ABONE OL", "nav.turkey": "Türkiye", "nav.abroad": "Yurtdışı",
         "nav.desserts": "Tatlılar", "nav.meals": "Yemekler",
         "hero.title": "Birlikte Keşfediyoruz",
@@ -72,9 +72,26 @@ class TranslationSystem {
         "section.title": "Sıkça Sorulan Sorular", "section.subtitle": "Merak ettiğiniz soruların cevapları burada",
         "question": "En çok ilhamı nereden alıyorsun: gezilerden mi yoksa mutfaktan mı?",
         "answer": "Aslında ikisi birbirini besliyor! Seyahat ettiğim yerlerde tattığım yöresel lezzetler beni mutfakta denemeler yapmaya yönlendiriyor. Mutfakta geliştirdiğim tarifler de bazen yeni rotalar keşfetme isteği uyandırıyor. İlham hem tabaktan hem yoldan geliyor diyebilirim.",
+        "map.title": "Gezilecek Yerler Haritası",
+        "map.subtitle": "Keşfetmek istediğiniz yerleri harita üzerinden inceleyin.",
+        "map.search": "Yer ara",
+        "map.all": "Tüm yerler",
+        "map.turkey": "Türkiye",
+        "map.abroad": "Yurtdışı", 
+        "map.directions": "Yol tarifi al",
+        "map.location": "Konumu görüntüle",
+        "suggester.title.recipe": "Bugün ne pişirsem?",
+        "suggester.title.travel": "Nereye gitsem?",
+        "suggester.button.recipe": "Bana tarif öner",
+        "suggester.button.travel": "Bana seyahat öner",
+        "suggester.details": "Detaya git →",
+        "suggestions.title": "Sana Özel Öneriler",
+        "suggestions.subtitle": "Bugün ne pişireceğini veya nereye gideceğini birlikte keşfedelim.",
+        "suggester.description": "Bugün senin için bir öneri seçelim.",
+        
       },
       en: {
-        "nav.home": "HOME", "nav.travels": "TRAVELS", "nav.recipes": "RECIPES",
+        "nav.home": "HOME", "nav.travels": "TRAVELS", "nav.recipes": "RECIPES","nav.map": "MAP",
         "nav.contact": "CONTACT / SUBSCRIBE", "nav.turkey": "Türkiye", "nav.abroad": "International",
         "nav.desserts": "Desserts", "nav.meals": "Meals",
         "hero.title": "Exploring Together",
@@ -117,9 +134,25 @@ class TranslationSystem {
         "section.title": "Frequently Asked Questions", "section.subtitle": "The answers to your questions are here",
         "question": "Where do you get most of your inspiration: from travels or from the kitchen?",
         "answer": "Actually, both feed each other! The local flavors I taste while traveling inspire me to experiment in the kitchen. The recipes I create in the kitchen sometimes spark a desire to discover new routes. I can say that inspiration comes both from the plate and the road.",
+        "map.title": "Places to Explore",
+        "map.subtitle": "Explore the places you want to visit on the map.",
+        "map.search": "Search for a place",
+        "map.all": "All places",
+        "map.turkey": "Türkiye",
+        "map.abroad": "International",
+        "map.directions": "Get directions",
+        "map.location": "View location",
+        "suggester.title.recipe": "What should I cook today?",
+        "suggester.title.travel": "Where should I go?",
+        "suggester.button.recipe": "Suggest a recipe",
+        "suggester.button.travel": "Suggest a destination",
+        "suggester.details": "View details →",
+        "suggestions.title": "Personalized Suggestions",
+        "suggestions.subtitle": "Let's discover together what to cook today or where to go.",
+        "suggester.description": "Let's find a recommendation for you today.",
       },
       ar: {
-        "nav.home": "الرئيسية", "nav.travels": "الرحلات", "nav.recipes": "الوصفات",
+        "nav.home": "الرئيسية", "nav.travels": "الرحلات", "nav.recipes": "الوصفات","nav.map": "رسم خريطة",
         "nav.contact": "اتصل / اشترك", "nav.turkey": "تركيا", "nav.abroad": "الخارج",
         "nav.desserts": "الحلويات", "nav.meals": "الوجبات",
         "hero.title": "نستكشف معًا",
@@ -162,7 +195,136 @@ class TranslationSystem {
         "section.title": "الأسئلة الشائعة", "section.subtitle": "إجابات أسئلتك تجدها هنا",
         "question": "من أين تستمد معظم إلهامك: من السفر أم من المطبخ؟",
         "answer": "في الواقع، كلاهما يكمل الآخر! النكهات المحلية التي أتذوقها أثناء السفر تدفعني إلى التجربة في المطبخ. والوصفات التي أطورها في المطبخ تثير أحيانًا رغبتي في اكتشاف وجهات جديدة. أستطيع أن أقول إن الإلهام يأتي من الطبق ومن الطريق معًا.",
+        "map.title": "الأماكن التي يمكنك استكشافها",
+        "map.subtitle": "استكشف الأماكن التي ترغب في زيارتها على الخريطة.",
+        "map.search": "ابحث عن مكان",
+        "map.all": "جميع الأماكن",
+        "map.turkey": "تركيا",
+        "map.abroad": "خارج البلاد",
+        "map.directions": "الحصول على الاتجاهات",
+        "map.location": "عرض الموقع",
+        "suggester.title.recipe": "ماذا أطبخ اليوم؟",
+        "suggester.title.travel": "إلى أين أذهب؟",
+        "suggester.button.recipe": "اقترح وصفة",
+        "suggester.button.travel": "اقترح وجهة سفر",
+        "suggester.details": "عرض التفاصيل ←",
+        "suggestions.title": "اقتراحات مخصصة لك",
+        "suggestions.subtitle": "لنكتشف معًا، ماذا نطبخ اليوم أو إلى أين نذهب.",
+        "suggester.description": "لنختر لك اقتراحًا اليوم.",
       },
+      
+      ru: {
+        "nav.home": "ГЛАВНАЯ",
+        "nav.travels": "ПУТЕШЕСТВИЯ",
+        "nav.recipes": "РЕЦЕПТЫ",
+        "nav.map": "КАРТА",
+        "nav.contact": "КОНТАКТЫ / ПОДПИСКА",
+        "nav.turkey": "Турция",
+        "nav.abroad": "За границей",
+        "nav.desserts": "Десерты",
+        "nav.meals": "Блюда",
+
+        "hero.title": "Открываем мир вместе",
+        "hero.subtitle": "Приглашаем вас в путешествие, полное воспоминаний о наших поездках, а также сладких и солёных рецептов из нашей кухни.",
+        "hero.explore": "Начать знакомство",
+        "hero.title1": "Кухня, где вкус превращается в искусство",
+        "hero.subtitle1": "Откройте для себя наши проверенные рецепты, приготовленные с любовью.",
+        "hero.subcontent": "Встречаемся в Instagram: маршруты, советы и многое другое!",
+
+        "features.travel.title": "По следам путешественников",
+        "features.travel.desc": "Мы делимся воспоминаниями о путешествиях по миру.",
+        "features.recipes.title": "Рецепты",
+        "features.recipes.desc": "Откройте для себя наши блюда и десерты с пошаговыми рецептами.",
+        "features.social.title": "Социальные сети",
+        "features.social.desc": "Следите за нами в социальных сетях, чтобы узнавать о новых публикациях.",
+
+        "destinations.international.title": "Международные направления",
+        "destinations.international.subtitle": "Откройте для себя самые красивые и удивительные места мира",
+        "destinations.turkey.title": "Направления в Турции",
+        "destinations.turkey.subtitle": "Откройте для себя уникальную красоту нашей страны",
+        "destinations.turkey": "Турция",
+        "destinations.saudi": "Саудовская Аравия",
+        "destinations.egypt": "Египет",
+        "destinations.nevsehir": "Невшехир",
+        "destinations.istanbul": "Стамбул",
+        "destinations.cappadocia": "Каппадокия",
+        "destinations.jeddah": "Джидда",
+        "destinations.giza": "Гиза",
+
+        "contact.title": "КОНТАКТЫ И ПОДПИСКА",
+        "contact.subtitle": "Готовы спланировать путешествие своей мечты? Свяжитесь с нами сегодня!",
+        "contact.info.title": "КОНТАКТНАЯ ИНФОРМАЦИЯ",
+        "contact.info.location": "Турция",
+        "contact.form.title": "Отправить сообщение",
+        "contact.form.name": "Имя и фамилия *",
+        "contact.form.email": "Электронная почта *",
+        "contact.form.phone": "Телефон",
+        "contact.form.subject": "Тема *",
+        "contact.form.message": "Ваше сообщение *",
+        "contact.form.newsletter": "Хочу получать новости и информацию об акциях",
+        "contact.form.submit": "Отправить сообщение",
+        "contact.form.name.error": "Пожалуйста, введите ваше имя.",
+        "contact.form.email.error": "Введите действительный адрес электронной почты.",
+        "contact.form.subject.error": "Пожалуйста, укажите тему.",
+        "contact.form.message.error": "Пожалуйста, напишите сообщение.",
+        "contact.form.required": "Пожалуйста, правильно заполните все обязательные поля.",
+        "contact.form.noservice": "Не удалось загрузить службу электронной почты. Обновите страницу.",
+        "contact.form.sending": "Отправка...",
+        "contact.form.success": "Ваше сообщение успешно отправлено! Мы скоро свяжемся с вами.",
+        "contact.form.error": "При отправке сообщения произошла ошибка. Попробуйте ещё раз.",
+
+        "footer.description": "С 2025 года мы создаём незабываемые впечатления от путешествий. Путь к направлениям вашей мечты начинается здесь.",
+        "footer.quick.title": "Быстрые ссылки",
+        "footer.destinations.title": "Популярные направления",
+        "footer.copyright": "© 2026 ÖZEN ATLAS. Все права защищены.",
+
+        "recipes.empty": "В этой категории пока нет рецептов.",
+        "recipes.ingredients": "Ингредиенты:",
+        "recipes.instructions": "Приготовление:",
+        "recipes.view": "Посмотреть рецепт",
+        "travels.empty": "В этой категории пока нет путешествий.",
+        "travels.details": "Подробнее",
+
+        "header.title": "Наши направления",
+        "header.subtitle": "Откройте для себя самые красивые места мира и создавайте незабываемые воспоминания",
+
+        "filter.btn": "Все",
+        "filter.Tr": "Турция",
+        "filter.abroad": "За границей",
+        "filter.all": "Все",
+        "filter.desert": "Десерты",
+        "filter.meal": "Блюда",
+        "filter.soup": "Супы",
+        "container.Tr": "Турция",
+        "container.abroad": "За границей",
+
+        "cta.title": "Присоединяйтесь к нам — спланируем путешествие вашей мечты",
+        "cta.insta": "Подписаться в Instagram",
+
+        "section.title": "Часто задаваемые вопросы",
+        "section.subtitle": "Здесь вы найдёте ответы на свои вопросы",
+        "question": "Что вдохновляет вас больше всего: путешествия или кухня?",
+        "answer": "На самом деле, они дополняют друг друга! Местные блюда, которые я пробую во время путешествий, вдохновляют меня на эксперименты на кухне. А рецепты, которые я создаю, иногда пробуждают желание открыть новые маршруты. Вдохновение приходит и с тарелки, и с дороги.",
+
+        "map.title": "Карта интересных мест",
+        "map.subtitle": "Изучите на карте места, которые хотите посетить.",
+        "map.search": "Найти место",
+        "map.all": "Все места",
+        "map.turkey": "Турция",
+        "map.abroad": "За границей",
+        "map.directions": "Построить маршрут",
+        "map.location": "Посмотреть местоположение",
+
+        "suggester.title.recipe": "Что приготовить сегодня?",
+        "suggester.title.travel": "Куда отправиться?",
+        "suggester.button.recipe": "Предложить рецепт",
+        "suggester.button.travel": "Предложить путешествие",
+        "suggester.details": "Подробнее →",
+        "suggestions.title": "اقتراحات مخصصة لك",
+        "suggestions.subtitle": "لنكتشف معًا، ماذا نطبخ اليوم أو إلى أين نذهب.",
+        "suggester.description": "Давайте подберём для вас рекомендацию на сегодня."
+      },
+
     };
   }
 
@@ -174,6 +336,9 @@ class TranslationSystem {
     this.applyDirection();
     this.updateLanguageUI();
     this.translatePage();
+    window.dispatchEvent(
+  new CustomEvent("languageChanged", { detail: { lang } })
+);
   }
 
   applyDirection() {
@@ -184,7 +349,14 @@ class TranslationSystem {
 
   updateLanguageUI() {
     const label = document.getElementById("currentLanguage");
-    if (label) label.textContent = { tr: "TR", en: "EN", ar: "العربية" }[this.lang] || "TR";
+    if (label) {
+  label.textContent = {
+    tr: "TR",
+    en: "EN",
+    ar: "العربية",
+    ru: "RU"
+  }[this.lang] || "TR";
+}
     document.querySelectorAll(".language-option").forEach((opt) =>
       opt.classList.toggle("active", opt.dataset.lang === this.lang));
   }

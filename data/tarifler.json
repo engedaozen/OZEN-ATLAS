@@ -11,6 +11,26 @@
   },
   {
     "id": 1736900000001,
+    "ad": "Karnıyarık",
+    "kategori": "yemek",
+    "kategoriDisplay": "Ana Yemek",
+    "hazirlamaSuresi": "50 dakika",
+    "malzemeler": "6 adet orta boy patlıcan\n300 g kıyma\n1 adet soğan\n2 adet yeşil biber\n2 adet domates\n2 diş sarımsak\n1 yemek kaşığı salça\nZeytinyağı, tuz, karabiber, pul biber",
+    "yapilisi": "Patlıcanları alacalı soyup tuzlu suda 20 dakika bekletin, ardından kurulayıp sıvı yağda kızartın.\nKıymayı, doğranmış soğan, biber ve sarımsakla kavurun. Salça, küp doğranmış domates ve baharatları ekleyip pişirin.\nPatlıcanların ortasını yarıp iç harç ile doldurun.\nÜzerine domates ve biber dilimleri yerleştirin. Salçalı su karışımını tepsiye döküp 200 derece fırında 20-25 dakika pişirin.",
+    "resim": "icons/karniyarik.jpg"
+  },
+  {
+    "id": 1736900000002,
+    "ad": "Tavuklu Sote",
+    "kategori": "yemek",
+    "kategoriDisplay": "Ana Yemek",
+    "hazirlamaSuresi": "35 dakika",
+    "malzemeler": "600 g tavuk göğsü\n2 yemek kaşığı sıvı yağ\n1 adet soğan\n2 adet kapya biber\n2 adet yeşil biber\n1 yemek kaşığı domates salçası\nTuz, karabiber, kekik",
+    "yapilisi": "Tavuk göğsünü kuşbaşı doğrayın. Tavyaya alıp suyunu salıp çekene kadar soteleyin.\nSıvı yağı, yemeklik doğranmış soğanı ve biberleri ekleyip sotelemeye devam edin.\nSalçayı ve baharatları ekleyip karıştırın. Yarım çay bardağı sıcak su ekleyerek kısık ateşte 10 dakika kadar pişirin.",
+    "resim": "icons/tavuksote.jpg"
+  },
+  {
+    "id": 1736900000003,
     "ad": "San Sebastian Cheesecake",
     "kategori": "tatli",
     "kategoriDisplay": "Tatlı",
@@ -20,7 +40,7 @@
     "resim": "icons/SanSebastianCheesecake.png"
   },
   {
-    "id": 1736900000002,
+    "id": 1736900000004,
     "ad": "Magnolia",
     "kategori": "tatli",
     "kategoriDisplay": "Tatlı",
@@ -28,5 +48,45 @@
     "malzemeler": "- 3 su bardağı süt\n- 1 su bardağı toz şeker\n- 3 yemek kaşığı un\n- 3 yemek kaşığı mısır nişastası\n- 2 yumurta sarısı\n- 1 paket vanilya\n- 200 ml soğuk krema\n- 1 paket petibör bisküvi\n- 2 muz\n- 10 adet çilek",
     "yapilisi": "Süt, şeker, un, nişasta, yumurta sarıları ve vanilyayı bir tencerede çırpın.\nKarışımı sürekli karıştırarak koyulaşana kadar pişirin. Ocaktan alıp tamamen soğutun.\nSoğuk kremayı çırpıp soğuyan muhallebiye yavaşça karıştırın.\nBisküvileri ufalayın. Kaselerin tabanına bisküvi, ardından muhallebi koyun; dilimlenmiş muz ve çilekle katları tekrarlayın.\nÜzerini bisküvi ve çilekle süsleyin. Buzdolabında en az 3 saat dinlendirip servis edin.",
     "resim": "icons/magnolia.png"
+  },
+  {
+    "id": 1736900000005,
+    "ad": "Tiramisu",
+    "kategori": "tatli",
+    "kategoriDisplay": "Tatlı",
+    "hazirlamaSuresi": "25 dakika + dinlendirme",
+    "malzemeler": "1 paket kedi dili bisküvi\n200 g labne peyniri\n200 ml sıvı krema\n1 çay bardağı toz şeker\n1 su bardağı ılık su\n1 yemek kaşığı granül kahve\n1 tatlı kaşığı şeker\nÜzeri için kakao",
+    "yapilisi": "Krema ve şekeri koyulaşana kadar çırpın, ardından labne peynirini ekleyip pürüzsüz olana kadar karıştırın.\nIlık su, kahve ve 1 tatlı kaşığı şekeri karıştırarak kahveli şerbeti hazırlayın.\nKedi dili bisküvilerini kahveli karışıma hızlıca batırıp borcama dizin.\nÜzerine kremayı yayın. Buzdolabında en az 4 saat (tercihen 1 gece) dinlendirin. Servis yapmadan önce üzerine kakao eleyin.",
+    "resim": "icons/tiramisu.jpg"
+  },
+  {
+  "id": 1736900000006,
+  "ad": "Borş Çorbası",
+  "kategori": "corba",
+  "kategoriDisplay": "Çorba",
+  "hazirlamaSuresi": "1 saat 15 dakika",
+  "malzemeler": "- 2 orta boy pancar\n- 2 orta boy patates\n- 1 orta boy havuç\n- 1/2 küçük beyaz lahana\n- 1 orta boy soğan\n- 2 diş sarımsak\n- 1 yemek kaşığı domates salçası\n- 1,5 litre et suyu veya sebze suyu\n- 2 yemek kaşığı sıvı yağ\n- 1 yemek kaşığı limon suyu veya sirke\n- Tuz ve karabiber\n- Servis için ekşi krema ve dereotu (isteğe bağlı)",
+  "yapilisi": "Pancarları soyup rendeleyin. Patatesleri küp küp, havucu ve lahanayı ince ince doğrayın. Soğanı küçük küçük doğrayın.\nBir tencerede sıvı yağı ısıtın. Soğanı ve havucu birkaç dakika kavurun. Rendelenmiş pancarı ve domates salçasını ekleyip 5-7 dakika daha pişirin.\nEt suyunu veya sebze suyunu tencereye ekleyin. Kaynamaya başlayınca patatesleri ve ince doğranmış lahanayı ilave edin.\nKısık-orta ateşte sebzeler yumuşayana kadar yaklaşık 30-40 dakika pişirin.\nEzilmiş sarımsağı, limon suyunu veya sirkeyi, tuzu ve karabiberi ekleyin. Birkaç dakika daha kaynatıp ocaktan alın.\nÇorbayı kaselere paylaştırın. İsteğe bağlı olarak üzerine ekşi krema ve ince kıyılmış dereotu ekleyerek sıcak servis edin.",
+  "resim": "icons/BorschtSoup.png"
+},
+{
+"id": 1736900000007,
+    "ad": "Mercimek Çorbası",
+    "kategori": "corba",
+    "kategoriDisplay": "Çorba",
+    "hazirlamaSuresi": "30 dakika",
+    "malzemeler": "1 su bardağı kırmızı mercimek\n1 adet soğan\n1 adet havuç\n1 adet patates\n1 yemek kaşığı un\n1 yemek kaşığı tereyağı\n5 su bardağı sıcak su\nTuz, karabiber, kimyon",
+    "yapilisi": "Tencerede tereyağını eritip doğranmış soğan, havuç ve patatesi kavurun.\nUnu ekleyip kokusu çıkana kadar karıştırın. Yıkanmış mercimekleri ilave edin.\nSıcak suyu ekleyip sebzeler yumuşayana kadar pişirin.\nÇorbayı pürüzsüz olana kadar blenderdan geçirin. Baharatlarını ekleyip 5 dakika daha kaynatın.",
+    "resim": "icons/mercimek.jpg"
+  },
+  {
+    "id": 1736900000008,
+    "ad": "Ezogelin Çorbası",
+    "kategori": "corba",
+    "kategoriDisplay": "Çorba",
+    "hazirlamaSuresi": "35 dakika",
+    "malzemeler": "1 su bardağı kırmızı mercimek\n1 yemek kaşığı pirinç\n1 yemek kaşığı pilavlık bulgur\n1 adet soğan\n2 diş sarımsak\n1 yemek kaşığı domates salçası\n1 yemek kaşığı tereyağı\nNane, pul biber, tuz",
+    "yapilisi": "Mercimek, pirinç ve bulguru yıkayıp tencereye alın. Üzerine 6 su bardağı su ekleyip bakliyatlar yumuşayana kadar haşlayın.\nAyrı bir tavada tereyağında doğranmış soğan ve sarımsağı kavurun. Salça ve naneyi ekleyin.\nHazırladığınız sosu haşlanan bakliyatların üzerine döküp çırpıcıyla iyice karıştırın. 10 dakika kısık ateşte pişirip servis edin.",
+    "resim": "icons/ezogelin.jpg"
   }
 ]
